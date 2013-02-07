@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Chore:</b>
+  <%= @chore_finish.chore %>
+</p>
+
+<p>
+  <b>Finishername:</b>
+  <%= @chore_finish.finishername %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @chore_finish.date %>
+</p>
+
+<p>
+  <b>Comments:</b>
+  <%= @chore_finish.comments %>
+</p>
+
+
+<%= link_to 'Edit', edit_chore_finish_path(@chore_finish) %> |
+<%= link_to 'Back', chore_finishes_path %>

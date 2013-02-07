@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  chore: MyString
+  finishername: MyString
+  date: 2013-02-06
+  comments: MyText
+
+two:
+  chore: MyString
+  finishername: MyString
+  date: 2013-02-06
+  comments: MyText

@@ -1,0 +1,31 @@
+<h1>Listing chores</h1>
+
+<table>
+  <tr>
+    <th>Chore</th>
+    <th>Assignedto</th>
+    <th>Chorefinished</th>
+    <th>Dateadded</th>
+    <th>Datefinished</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @chores.each do |chore| %>
+  <tr>
+    <td><%= chore.chore %></td>
+    <td><%= chore.assignedto %></td>
+    <td><%= chore.chorefinished %></td>
+    <td><%= chore.dateadded %></td>
+    <td><%= chore.datefinished %></td>
+    <td><%= link_to 'Show', chore %></td>
+    <td><%= link_to 'Edit', edit_chore_path(chore) %></td>
+    <td><%= link_to 'Destroy', chore, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Chore', new_chore_path %>

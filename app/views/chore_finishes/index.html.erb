@@ -1,0 +1,29 @@
+<h1>Listing chore_finishes</h1>
+
+<table>
+  <tr>
+    <th>Chore</th>
+    <th>Finishername</th>
+    <th>Date</th>
+    <th>Comments</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @chore_finishes.each do |chore_finish| %>
+  <tr>
+    <td><%= chore_finish.chore %></td>
+    <td><%= chore_finish.finishername %></td>
+    <td><%= chore_finish.date %></td>
+    <td><%= chore_finish.comments %></td>
+    <td><%= link_to 'Show', chore_finish %></td>
+    <td><%= link_to 'Edit', edit_chore_finish_path(chore_finish) %></td>
+    <td><%= link_to 'Destroy', chore_finish, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Chore finish', new_chore_finish_path %>

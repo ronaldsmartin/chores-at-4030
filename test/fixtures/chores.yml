@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  chore: MyString
+  assignedto: MyString
+  chorefinished: false
+  dateadded: 2013-02-06
+  datefinished: 2013-02-06
+
+two:
+  chore: MyString
+  assignedto: MyString
+  chorefinished: false
+  dateadded: 2013-02-06
+  datefinished: 2013-02-06
