@@ -1,9 +1,11 @@
 ChoresAt4030::Application.routes.draw do
+  get "home/index"
+
   resources :chore_finishes
 
   resources :chores
   
-  root :to => 'chores#index'
+  root :to => 'home#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
