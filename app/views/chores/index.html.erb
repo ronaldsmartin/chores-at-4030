@@ -1,12 +1,23 @@
-<h1>Listing chores</h1>
+<h1>Chore Listing</h1>
+
+<%= form_tag("/search", :method => "get") do %>
+  <%= label_tag(:query, "Search for:") %>
+  <%= text_field_tag(:query) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<div></div>
+
+<%= check_box_tag(:chores_visible) %>
+<%= label_tag(:chores_visible, "Show Chores") %>
 
 <table>
   <tr>
     <th>Chore</th>
-    <th>Assignedto</th>
-    <th>Chorefinished</th>
-    <th>Dateadded</th>
-    <th>Datefinished</th>
+    <th>Assigned To</th>
+    <th>Chore Finished</th>
+    <th>Date Added</th>
+    <th>Date Finished</th>
     <th></th>
     <th></th>
     <th></th>
