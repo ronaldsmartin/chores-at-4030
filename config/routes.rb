@@ -1,4 +1,7 @@
 ChoresAt4030::Application.routes.draw do
+  resources :chores
+
+
   get "home/index"
 
   resources :chore_finishes

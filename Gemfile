@@ -4,6 +4,7 @@ gem 'rails', '3.2.12'
 gem 'json', '1.7.7'
 gem 'bootstrap-sass'
 gem 'simple_form'
+gem 'validates_timeliness', '~> 3.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -11,6 +12,7 @@ gem 'simple_form'
 group :development, :test do
 	gem 'sqlite3'
 	gem 'rspec-rails'
+	gem 'debugger'
 end
 
 group :production do
