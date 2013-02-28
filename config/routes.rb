@@ -1,4 +1,6 @@
 ChoresAt4030::Application.routes.draw do
+  devise_for :users
+
   resources :chores
 
 

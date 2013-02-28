@@ -1,6 +1,11 @@
 require 'spec_helper'
 
 describe Chore do
+
+	before do
+		sign_in
+	end
+
 	it "fields should be nonempty" do
 		subject.should_not be_valid
 	end

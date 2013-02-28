@@ -1,6 +1,10 @@
 require 'spec_helper'
 
 describe "Chores" do
+	before do
+		sign_in
+	end
+
   describe "GET /chores" do
     it "works! (now write some real specs)" do
       # Run the generator again with the --webrat flag if you want to use webrat methods/matchers

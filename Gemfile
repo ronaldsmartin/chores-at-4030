@@ -5,6 +5,7 @@ gem 'json', '1.7.7'
 gem 'bootstrap-sass'
 gem 'simple_form'
 gem 'validates_timeliness', '~> 3.0'
+gem 'devise'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
