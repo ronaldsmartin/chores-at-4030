@@ -65,5 +65,5 @@ ChoresAt4030::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
-  config.action_mailer.default_utl_options = { :host => 'chores-at-4030.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'chores-at-4030.herokuapp.com' }
 end
