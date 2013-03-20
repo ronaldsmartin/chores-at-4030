@@ -1,0 +1,16 @@
+Wed, 20 Mar 2013 19:53:20 -0400
+doc/README_FOR_APP	Wed, 06 Feb 2013 12:20:49 -0500
+app/controllers/application_controller.rb	Wed, 27 Feb 2013 22:39:32 -0500
+app/controllers/chore_finishes_controller.rb	Wed, 06 Feb 2013 23:58:07 -0500
+app/controllers/chores_controller.rb	Wed, 06 Feb 2013 23:56:06 -0500
+app/controllers/home_controller.rb	Wed, 13 Feb 2013 22:18:51 -0500
+app/controllers/houses_controller.rb	Wed, 20 Mar 2013 18:32:42 -0400
+app/helpers/application_helper.rb	Wed, 13 Feb 2013 12:13:30 -0500
+app/helpers/chore_finishes_helper.rb	Wed, 06 Feb 2013 23:58:07 -0500
+app/helpers/chores_helper.rb	Wed, 06 Feb 2013 23:56:07 -0500
+app/helpers/home_helper.rb	Wed, 13 Feb 2013 22:18:51 -0500
+app/helpers/houses_helper.rb	Wed, 20 Mar 2013 18:32:43 -0400
+app/models/chore.rb	Wed, 20 Mar 2013 19:35:46 -0400
+app/models/chore_finish.rb	Wed, 06 Feb 2013 23:58:07 -0500
+app/models/house.rb	Wed, 20 Mar 2013 19:35:31 -0400
+app/models/user.rb	Wed, 27 Feb 2013 22:28:55 -0500

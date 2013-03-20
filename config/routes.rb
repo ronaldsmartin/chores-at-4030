@@ -1,4 +1,7 @@
 ChoresAt4030::Application.routes.draw do
+  resources :houses
+
+
   devise_for :users
 
   resources :chores

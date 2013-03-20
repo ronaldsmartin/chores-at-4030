@@ -16,6 +16,10 @@
     <%= f.text_field :chore %>
   </div>
   <div class="field">
+    <%= f.label :house %><br />
+    <%= collection_select(:house, :house_id, House.all, :id, :house_name) %>
+  </div>
+  <div class="field">
     <%= f.label :assignedto %><br />
     <%= f.text_field :assignedto %>
   </div>
