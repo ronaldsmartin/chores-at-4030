@@ -3,11 +3,6 @@ class ChoresController < ApplicationController
   # GET /chores.json
   def index
     @chores = Chore.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @chores }
-    end
   end
 
   # GET /chores/1
@@ -42,14 +37,10 @@ class ChoresController < ApplicationController
   def create
     @chore = Chore.new(params[:chore])
 
-    respond_to do |format|
-      if @chore.save
-        format.html { redirect_to @chore, notice: 'Chore was successfully created.' }
-        format.json { render json: @chore, status: :created, location: @chore }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @chore.errors, status: :unprocessable_entity }
-      end
+    if @chore.save
+      redirect_to @chore, notice: 'Chore was successfully created.'
+    else
+      render action: "new"
     end
   end
 

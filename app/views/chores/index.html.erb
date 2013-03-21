@@ -1,15 +1,9 @@
 <h1>Chore Listing</h1>
 
-<%= form_tag("/search", :method => "get") do %>
-  <%= label_tag(:query, "Search for:") %>
-  <%= text_field_tag(:query) %>
-  <%= submit_tag("Search") %>
-<% end %>
-
 <div></div>
+<%= check_box_tag(:show_finished) %>
+<%= label_tag(:show_finished, "Show Finished Chores") %>
 
-<%= check_box_tag(:chores_visible) %>
-<%= label_tag(:chores_visible, "Show Chores") %>
 
 <table>
   <tr>
@@ -23,18 +17,19 @@
     <th></th>
   </tr>
 
-<% @chores.each do |chore| %>
-  <tr>
-    <td><%= chore.chore %></td>
-    <td><%= chore.assignedto %></td>
-    <td><%= chore.chorefinished %></td>
-    <td><%= chore.dateadded %></td>
-    <td><%= chore.datefinished %></td>
-    <td><%= link_to 'Show', chore %></td>
-    <td><%= link_to 'Edit', edit_chore_path(chore) %></td>
-    <td><%= link_to 'Destroy', chore, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
+
+    <% @chores.each do |chore| %>
+      <tr>
+        <td><%= chore.chore %></td>
+        <td><%= chore.assignedto %></td>
+        <td><%= chore.chorefinished %></td>
+        <td><%= chore.dateadded %></td>
+        <td><%= chore.datefinished %></td>
+        <td><%= link_to 'Show', chore %></td>
+        <td><%= link_to 'Edit', edit_chore_path(chore) %></td>
+        <td><%= link_to 'Destroy', chore, confirm: 'Are you sure?', method: :delete %></td>
+      </tr>
+    <% end %>  
 </table>
 
 <br />

@@ -1,30 +1,29 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Chore:</b>
-  <%= @chore.chore %>
-</p>
+  <p>
+    <b>Chore:</b>
+    <%= @chore.chore %>
+  </p>
 
-<p>
-  <b>Assignedto:</b>
-  <%= @chore.assignedto %>
-</p>
+  <p>
+    <b>Assignedto:</b>
+    <%= @chore.assignedto %>
+  </p>
 
-<p>
-  <b>Chorefinished:</b>
-  <%= @chore.chorefinished %>
-</p>
+  <p>
+    <b>Chorefinished:</b>
+    <%= @chore.chorefinished %>
+  </p>
 
-<p>
-  <b>Date Added:</b>
-  <%= @chore.dateadded %>
-</p>
+  <p>
+    <b>Date Added:</b>
+    <%= @chore.dateadded %>
+  </p>
 
-<p>
-  <b>Date Finished:</b>
-  <%= @chore.datefinished %>
-</p>
-
+  <p>
+    <b>Date Finished:</b>
+    <%= @chore.datefinished %>
+  </p>
 
 <%= link_to 'Edit', edit_chore_path(@chore) %> |
 <%= link_to 'Back', chores_path %>
