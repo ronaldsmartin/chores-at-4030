@@ -36,5 +36,6 @@ ChoresAt4030::Application.configure do
   config.assets.debug = true
 
   #Define default URL for development
+  config.action_mailer.delivery_method = :letter_opener
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 end

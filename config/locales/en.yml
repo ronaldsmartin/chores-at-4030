@@ -3,3 +3,4 @@
 
 en:
   hello: "Hello world"
+  en.notifications.new_chore.subject: "You've been assigned a new chore!"

@@ -38,6 +38,7 @@ class ChoresController < ApplicationController
     @chore = Chore.new(params[:chore])
 
     if @chore.save
+      Notifications.new_chore.deliver
       redirect_to @chore, notice: 'Chore was successfully created.'
     else
       render action: "new"
