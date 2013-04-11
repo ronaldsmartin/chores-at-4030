@@ -2,10 +2,7 @@
 
 <div></div>
 
-<form class="form-horizontal" data-remote="true">
-    <%= check_box_tag(:show_finished) %>
-    <%= label_tag :show_finished, "Show Finished Chores", class: "checkbox inline" %>
-</form>
+<button id="toggle_button">Show/Hide Finished Chores</button>
 
 <table>
   <tr>
@@ -21,19 +18,31 @@
 
 
     <% @chores.each do |chore| %>
-      <tr>
-        <td><%= chore.chore %></td>
-        <td><%= chore.assignedto %></td>
-        <td><%= chore.chorefinished %></td>
-        <td><%= chore.dateadded %></td>
-        <td><%= chore.datefinished %></td>
-        <td><%= link_to 'Show', chore %></td>
-        <td><%= link_to 'Edit', edit_chore_path(chore) %></td>
-        <td><%= link_to 'Destroy', chore, confirm: 'Are you sure?', method: :delete %></td>
-      </tr>
+        <% if chore.chorefinished? %>
+            <tr class="finished_chore_tr">
+        <% else %>
+            <tr>
+        <% end %>
+                <td><%= chore.chore %></td>
+                <td><%= chore.assignedto %></td>
+                <td><%= chore.chorefinished %></td>
+                <td><%= chore.dateadded %></td>
+                <td><%= chore.datefinished %></td>
+                <td><%= link_to 'Show', chore %></td>
+                <td><%= link_to 'Edit', edit_chore_path(chore) %></td>
+                <td><%= link_to 'Destroy', chore, confirm: 'Are you sure?', method: :delete %></td>
+            </tr>
     <% end %>  
 </table>
 
 <br />
 
 <%= link_to 'New Chore', new_chore_path %>
+
+<script type="text/javascript">
+    $(function () {
+        $("#toggle_button").click(function () {
+            $(".finished_chore_tr").toggle();
+        });
+    });
+</script>
