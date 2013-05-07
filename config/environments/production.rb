@@ -65,7 +65,7 @@ ChoresAt4030::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
-  config.action_mailer.smtp_settings = {
+  ActionMailer::Base.smtp_settings = {
     :addresses      => 'smtp.sendgrid.net',
     :port           => '587',
     :authentication => :plain,

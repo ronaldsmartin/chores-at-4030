@@ -1,8 +1,19 @@
-<h1>Chores at 4030 Home</h1>
+<h1 class="text-center">Chores at 4030 Home</h1>
 
-<div>
-	<%= link_to "Chores", chores_path %>
+<div class="text-center">
+	<p class="text-center">Thank you for using Chores@4030! Use the following links navigate the site. Please email Ronald at <a class="text-info" href="mailto:ronmar@sas.upenn.edu">ronmar@sas.upenn.edu</a> with any questions.</p>
 </div>
-<div>
-	<%= link_to "Houses", houses_path %>
+
+<div class="row-fluid text-left">
+	<div class="span6">
+		<h2>Chore List</h2>
+		<i class="icon-list"></i>
+		<%= link_to 'chores', chores_path %>
+	</div>
+
+	<div class="span6 text-right">
+		<h2>House List</h2>
+		<%= link_to 'houses', houses_path %>
+		<i class="icon-home"></i>
+	</div>
 </div>

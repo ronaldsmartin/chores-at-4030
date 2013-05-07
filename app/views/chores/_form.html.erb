@@ -1,3 +1,4 @@
+<br></br>
 <%= form_for(@chore) do |f| %>
   <% if @chore.errors.any? %>
     <div id="error_explanation">
@@ -15,27 +16,34 @@
     <%= f.label :chore %><br />
     <%= f.text_field :chore %>
   </div>
-  <div class="field">
-    <%= f.label :house %><br />
+  <div class="field input-prepend">
+    <label>House</label>
+    <span class="add-on"><i class="icon-home"></i></span>
     <%= collection_select(:house, :house_id, House.all, :id, :house_name) %>
   </div>
-  <div class="field">
-    <%= f.label :assignedto %><br />
+  <div class="field input-prepend">
+    <label>Assigned To</label>
+    <span class="add-on"><i class="icon-user"></i></span>
     <%= f.text_field :assignedto %>
   </div>
-  <div class="field">
-    <%= f.label :chorefinished %><br />
-    <%= f.check_box :chorefinished %>
-  </div>
-  <div class="field">
-    <%= f.label :dateadded %><br />
+  <% if current_page?(edit_chore_path(@chore)) %>
+    <div class="field input-prepend">
+      <label>Chore Finished?</label>
+      <span class="add-on"><i class="icon-ok"></i></span>
+      <%= f.check_box :chorefinished %>
+    </div>
+  <% end %>
+  <div class="field input-prepend">
+    <label>Date Added</label>
+    <span class="add-on"><i class="icon-calendar"></i></span>
     <%= f.date_select :dateadded %>
   </div>
-  <div class="field">
-    <%= f.label :datefinished %><br />
+  <div class="field input-prepend">
+    <label>Date Due</label>
+    <span class="add-on"><i class="icon-calendar"></i></span>
     <%= f.date_select :datefinished %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Submit', :class => 'btn btn-primary'%>
   </div>
 <% end %>
